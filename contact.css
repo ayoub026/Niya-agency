@@ -1,0 +1,140 @@
+/* Algemene stijlen voor de contactpagina */
+body.contact-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Lichte achtergrondkleur */
+    color: #333;
+}
+
+/* Contactpagina hoofdindeling */
+.contact-main {
+    padding: 50px 0;
+}
+
+.contact-main .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-left {
+    padding-right: 20px;
+}
+
+.contact-left h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-left a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-left a:hover {
+    color: #ff6600;
+}
+
+.contact-right h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-right input,
+.contact-right textarea {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-right button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-right button:hover {
+    background-color: #ff6600;
+}
+
+/* Kaart */
+.map-container {
+    margin-top: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer.contact-footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer.contact-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+    .contact-main .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left, .contact-right {
+        padding: 0;
+        text-align: center;
+    }
+
+    .contact-left p {
+        margin-bottom: 15px;
+    }
+
+    .map-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
