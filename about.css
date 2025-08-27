@@ -1,0 +1,275 @@
+/* Algemene reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Header */
+/* ✅ HEADER gecentreerd */
+.header {
+  background-color: #000;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centring content horizontaal */
+}
+
+/* ✅ Navbar in 1 regel, mooi gecentreerd */
+.navbar {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+/* ✅ Linkstijl */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  height: 60px;
+  line-height: 60px;
+  transition: color 0.3s ease;
+}
+
+/* ✅ Hover effect */
+.navbar a:hover {
+  color: #f04c4c;
+}
+
+/* ✅ Icons vóór linkjes */
+.navbar a::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #f04c4c;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.navbar a[href*="index"]::before { content: "\f015"; }
+.navbar a[href*="clients"]::before { content: "\f0c0"; }
+.navbar a[href*="services"]::before { content: "\f7d9"; }
+.navbar a[href*="about"]::before { content: "\f007"; }
+.navbar a[href*="contact"]::before { content: "\f0e0"; }
+  
+  /* Over Ons hoofdtekst */
+  .about-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    line-height: 1.8;
+  }
+  
+  /* Sectiekop met rode streep */
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #f04c4c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Oprichter & Cameraman sectie — ROND */
+  .founder {
+    padding: 4rem 1rem;
+  }
+  
+  .founder h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .founder h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #f04c4c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Flexbox layout */
+  .founder-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  /* Ronde profielfoto */
+  .founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tekst naast foto */
+  .founder-info {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .founder-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .founder-info p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .founder-details {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .founder-info {
+      text-align: center;
+    }
+  }
+  
+  /* Contactsectie */
+  .contact {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 1rem;
+  }
+  
+  .contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .contact-item .icon {
+    font-size: 2rem;
+    color: #f04c4c;
+  }
+  
+  .contact-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .contact-item p,
+  .contact-item a {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    text-align: center;
+    color: #ccc;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .founder-details {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .founder-info {
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar a {
+      margin: 0.5rem 0;
+    }
+  }
+  .navbar a::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #f04c4c;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    margin-right: 6px;
+  }
