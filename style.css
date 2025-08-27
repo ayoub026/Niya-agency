@@ -7,284 +7,299 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Header */
+/* Zwarte header */
 .header {
-    background-color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #000; /* Zwart */
+    z-index: 1000;
     padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Navigatielinks wit met rode iconen */
 .navbar a {
-    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff; /* Witte tekst */
+    font-weight: bold;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 12px;
+    text-transform: uppercase;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #f04c4c;
+    color: #f04c4c; /* Rood bij hover */
 }
-/* Dikke letters voor de navigatiebalk */
-.navbar a {
-    font-weight: bold; /* Zorgt voor dikke letters */
-    font-family: Arial, sans-serif; /* Optioneel: Kies een strak lettertype */
-    text-transform: uppercase; /* Optioneel: Maak de letters hoofdletters */
+
+/* Rode Font Awesome iconen */
+.navbar a::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-block;
+    color: #f04c4c; /* Rode iconen */
+    margin-right: 6px;
+}
+
+/* Specifieke iconen per link */
+.navbar a[href*="index"]::before {
+    content: "\f015"; /* Home */
+}
+.navbar a[href*="clients"],
+.navbar a[href*="klanten"]::before {
+    content: "\f0c0"; /* Users */
+}
+.navbar a[href*="services"],
+.navbar a[href*="diensten"]::before {
+    content: "\f7d9"; /* Tools */
+}
+.navbar a[href*="about"],
+.navbar a[href*="over-ons"]::before {
+    content: "\f007"; /* User */
+}
+.navbar a[href*="contact"]::before {
+    content: "\f0e0"; /* Envelope */
+}
+.navbar {
+    display: flex;
+    justify-content: center; /* Centreert de navigatie */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Parallax Sectie */
+.parallax {
+    position: relative;
+    background-image: url('images/background.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-overlay {
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+.parallax-logo {
+    max-width: 70%;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Slogan */
+.slogan {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    animation: fade-in 2s ease-in-out;
+    margin-top: 40px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hero Sectie */
 .hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/hero-background.jpg'); /* Zorg dat dit beeld er is */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* Donkere overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
     text-align: center;
-    padding: 4rem 1rem;
-    background-color: #f4f4f4;
+    color: #fff;
+    padding: 2rem;
+    animation: fadeSlideIn 1.5s ease;
+    z-index: 2;
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-}
-
-.hero-logo {
-    width: 150px;
-    margin: 1rem auto;
+    font-weight: 800;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-subtext {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #eee;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.btn-cta {
+    background-color: #f04c4c; /* Oranje kleur */
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Over Ons */
-.about, .services, .clients, .contact {
-    padding: 4rem 1rem;
-    text-align: center;
+.btn-cta:hover {
+    background-color: #f04c4c; /* Donkerdere oranje bij hover */
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Diensten */
+.services {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
 .service-grid {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center; /* CENTREERT de blokken */
+    gap: 3rem;
+    padding: 2rem 0;
 }
-
 .service-item {
-    background: #fff;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 300px;
-}
-
-/* Klanten */
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.client-item img {
-    max-width: 150px;
-    height: auto;
+    flex: 0 1 300px; /* zorgt voor gelijke breedte-blokken */
+    max-width: 350px;
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
-.client-item img:hover {
-    transform: scale(1.1);
+.service-item:hover {
+    transform: translateY(-5px);
 }
-/* Klanten Sectie */
+.service-icon {
+    font-size: 2.5rem;
+    color: #0d0d0d;
+    margin-bottom: 1rem;
+}
+
+/* Klanten */
 .clients {
     padding: 4rem 1rem;
+    background-color: #f9f9f9;
     text-align: center;
-    background-color: #f9f9f9; /* Lichtgrijze achtergrond */
 }
 
 .clients h2 {
-    margin-bottom: 2rem;
     font-size: 2rem;
+    margin-bottom: 2rem;
     color: #333;
 }
 
-/* Grid voor logo's */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsief grid */
-    gap: 20px; /* Ruimte tussen de logo's */
-    justify-items: center;
-    align-items: center;
-}
-
-/* Styling voor de logo kaders */
-.client-item {
-    background-color: #fff; /* Witte achtergrond voor elk kader */
-    border: 1px solid #ddd; /* Lichtgrijze rand */
-    border-radius: 8px; /* Ronde hoeken */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
-    padding: 20px; /* Ruimte binnen het kader */
-    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 200px; /* Maximale breedte van de kaders */
-    height: 150px; /* Vaste hoogte voor elk kader */
-}
-
-/* Logo styling */
-.client-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Zorgt ervoor dat het logo binnen het kader blijft */
-}
-
-/* Specifieke styling voor het Celebrity Hajj-logo */
-.client-item img[alt="Celebrity Hajj & Umrah"] {
-    max-width: 150px; /* Pas de breedte aan naar wens */
-    height: auto;
-    display: block;
+    max-width: 1400px;
     margin: 0 auto;
-}
-/* Klantensectie */
-.clients-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Lichtgrijze achtergrond */
-}
-
-.clients-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Maak het responsief */
-    gap: 20px; /* Ruimte tussen logo's */
-    justify-items: center;
-}
-
-.client-item {
-    background-color: #fff; /* Witte achtergrond */
-    border-radius: 10px; /* Mooie afgeronde hoeken */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schaduw */
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px; /* Maak alle blokken even hoog */
-}
-
-.client-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Zorg dat de logo's volledig zichtbaar zijn */
-}
-.clients-section {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 .client-item {
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 15px;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px; /* Maak de blokken allemaal even hoog */
+    height: 140px;
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover {
+    transform: scale(1.05);
 }
 
 .client-item img {
-    max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Zorg dat het logo netjes blijft in de box */
-}
-.jeugdx-logo img {
-    filter: invert(1) brightness(0); /* Zet wit om naar zwart */
-}
-.clients-section {
-    padding: 50px 0; /* Ruimte boven en onder de hele sectie */
-    text-align: center;
-    background-color: #fff; /* Zorg dat de achtergrond van de sectie wit blijft */
-}
-
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px; /* Ruimte tussen de logo's */
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px; /* Extra ruimte boven de grid */
-    margin-bottom: 30px; /* Extra ruimte onder de grid */
-}
-
-.clients-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 50px auto; /* Ruimte tussen de tekst en de grid */
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-.footer {
-    background-color: #000; /* Footer zwart maken */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-body {
-    margin: 0;
-    background-color: #ffffff; /* Achtergrondkleur onder de footer zwart maken */
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* Contact */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-}
-
-.btn-primary {
+.contact {
     background-color: #000;
     color: #fff;
-    padding: 0.8rem 2rem;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: #000000;
-}
-/* Contactgedeelte */
-.contact {
-    background-color: #000; /* Zwarte achtergrond */
-    color: #fff; /* Witte tekst */
     padding: 4rem 1rem;
 }
 
@@ -296,7 +311,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsief grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     align-items: left;
 }
@@ -308,25 +323,20 @@ body {
 }
 
 .contact-item .icon {
-    font-size: 2rem; /* Grootte van de icoontjes */
-    color: #ffffff; /* Goudkleur, pas dit aan naar wens */
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 .contact-item h3 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    color: #fff;
 }
 
-.contact-item p {
+.contact-item p, .contact-item a {
     margin: 0;
     font-size: 1rem;
     color: #ccc;
-}
-
-.contact-item a {
     text-decoration: none;
-    color: #ffffff; /* Goudkleur voor links */
 }
 
 .contact-item a:hover {
@@ -340,241 +350,276 @@ body {
     padding: 1rem;
     text-align: center;
 }
-/* Over Ons Sectie */
-.about-content {
-    padding: 4rem 1rem;
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+@media (max-width: 768px) {
+    .service-grid, .clients-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.client-extra {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #090909;
     text-align: center;
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+/* H2-styling voor sectiekoppen zoals 'Onze Diensten' en 'Onze Klanten' */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
 }
 
-.about-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+/* Optionele underline effect onder de koppen */
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f04c4c; /* accentkleur */
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+/* ============ RESPONSIVE MEDIA QUERIES ============ */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtext {
+        font-size: 1.2rem;
+    }
+
+    .btn-cta {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
-.about-content p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    color: #555;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+        height: auto;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtext {
+        font-size: 1rem;
+    }
+
+    .service-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .parallax-logo {
+        max-width: 90%;
+    }
+
+    .slogan {
+        font-size: 2rem;
+    }
 }
 
-/* Oprichter Sectie */
-.founder {
-    padding: 4rem 1rem;
-    background-color: #f9f9f9;
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.95rem;
+    }
+
+    .btn-cta {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+
+    /* Parallax werkt niet goed op mobiel, fallback */
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    /* Slogan kleiner maken voor kleine schermen */
+    .slogan {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    @media (max-width: 480px) {
+        .slogan {
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Diensten grid onder elkaar met ruimte */
+    .service-grid {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0;
+        align-items: center;
+    }
+
+    .service-item {
+        max-width: 90%;
+    }
+
+    /* CTA-knop in hero iets groter en ruimer */
+    .btn-cta {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    /* Client logos ruimer en overzichtelijker */
+    .client-item {
+        margin-bottom: 1rem;
+    }
+
+    /* Contact kolommen netjes onder elkaar */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigatie kan hier evt. vervangen worden met hamburger */
+    /* Wil je dat ik dat ook bouw, laat het weten */
+}
+.section-title {
     text-align: center;
-}
-
-.founder h2 {
-    font-size: 2rem;
     margin-bottom: 2rem;
-    color: #333;
 }
 
-.founder-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.founder-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.founder-info h3 {
-    font-size: 1.5rem;
+.section-icon {
+    font-size: 2rem;
+    color: #f04c4c; /* Accentkleur passend bij underline */
     margin-bottom: 0.5rem;
-    color: #333;
+    display: block;
 }
-
-.founder-info p {
-    max-width: 600px;
-    line-height: 1.8;
-    color: #555;
-}
-.contact-pagina .contact-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 50px 20px;
-}
-
-.contact-pagina .contact-info {
-    flex: 1;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-.contact-pagina .contact-info p {
-    margin: 10px 0;
-}
-
-.contact-pagina .contact-info a {
-    color: #000;
-    text-decoration: none;
-}
-
-.contact-pagina .map iframe {
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.contact-pagina .contact-form {
-    flex: 1;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-pagina .contact-form h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.contact-pagina .contact-form input,
-.contact-pagina .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-pagina .contact-form button {
-    background-color: #333;
+.contact h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+  }
+  
+  .contact-item .icon {
+    font-size: 2.2rem;
+    color: #f04c4c;
+    margin-right: 1rem;
+  }
+  
+  .contact-item a {
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  /* Font Awesome iconen in navigatie */
+  .navbar a::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-block;
+    color: #f04c4c;
+    margin-right: 6px;
 }
 
-.contact-pagina .contact-form button:hover {
-    background-color: #555;
+.navbar a[href*="index"]::before {
+    content: "\f015"; /* Home */
 }
-
-/* Parallax Styling */
-.parallax {
+.navbar a[href*="clients"]::before,
+.navbar a[href*="klanten"]::before {
+    content: "\f0c0"; /* Users */
+}
+.navbar a[href*="services"]::before,
+.navbar a[href*="diensten"]::before {
+    content: "\f7d9"; /* Tools */
+}
+.navbar a[href*="about"]::before,
+.navbar a[href*="over-ons"]::before {
+    content: "\f007"; /* User */
+}
+.navbar a[href*="contact"]::before {
+    content: "\f0e0"; /* Envelope */
+}
+.hero {
     position: relative;
-    background-image: url('images/background.jpg'); /* Voeg een achtergrondafbeelding toe */
-    height: 100vh; /* Volledig scherm */
-    background-attachment: fixed; /* Parallax-effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
+    height: 100vh;
     overflow: hidden;
-}
-
-.logo-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-video {
     position: absolute;
-    top: 40%; /* Iets hoger geplaatst voor meer ruimte voor de slogan */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.parallax-logo {
-    max-width: 70%; /* Zorgt ervoor dat het logo breder wordt op de pagina */
-    height: auto; /* Behoudt de verhouding van het logo */
-    animation: float 4s ease-in-out infinite; /* Laat de animatie zoals het is */
-}
-
-/* Animatie voor de logo */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(-10px); /* Alleen op en neer bewegen */
-    }
-    50% {
-        transform: translateY(10px); /* Alleen op en neer bewegen */
-    }
-}
-
-/* Parallax Styling */
-.parallax {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero-content {
     position: relative;
-    background-image: url('images/background.jpg'); /* Voeg een achtergrondafbeelding toe */
-    height: 100vh; /* Volledig scherm */
-    background-attachment: fixed; /* Parallax-effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column; /* Zorgt ervoor dat items onder elkaar staan */
-    justify-content: center; /* Verticaal centreren */
-    align-items: center; /* Horizontaal centreren */
-    overflow: hidden;
-}
-
-.logo-overlay {
-    text-align: center;
-    margin-bottom: 40px; /* Zorg voor voldoende ruimte tussen het logo en de slogan */
-    z-index: 1; /* Zorg ervoor dat het logo bovenop de achtergrond staat */
-}
-
-.parallax-logo {
-    max-width: 70%; /* Zorgt ervoor dat het logo breder wordt op de pagina */
-    height: auto; /* Behoudt de verhouding van het logo */
-    animation: float 4s ease-in-out infinite; /* Laat de animatie zoals het is */
-    z-index: 2; /* Zorg ervoor dat het logo altijd boven de slogan staat */
-}
-/* Animatie voor de logo */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(-10px); /* Alleen op en neer bewegen */
-    }
-    50% {
-        transform: translateY(10px); /* Alleen op en neer bewegen */
-    }
-}
-
-/* Slogan Styling */
-slogan {
-    font-family: 'Poppins', sans-serif; /* Specifiek lettertype */
-    font-size: 3rem; /* Groot lettertype voor de slogan */
-    font-weight: 700; /* Dikke letters */
-    text-transform: uppercase; /* Alles in hoofdletters */
-    color: #000; /* Zwarte kleur */
-    text-align: center; /* Centraal uitlijnen */
-    animation: fade-in 2s ease-in-out; /* Smooth fade-in animatie */
-    margin-top: 40px; /* Zorgt voor ruimte onder het logo */
-    z-index: 1; /* Zorg ervoor dat de slogan onder het logo staat */
-}
-
-/* Animaties */
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animaties */
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
