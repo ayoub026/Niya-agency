@@ -4,9 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Niya Agency</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="contact.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+
+  <!-- Leaflet CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+zNnH7tA91LZD69eIed3v7JmGk09gC+H2yM8Zn9nM="
+    crossorigin=""
+  />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="contact-page">
@@ -25,6 +38,8 @@
   <!-- Contactgedeelte -->
   <section class="contact-main">
     <div class="container">
+      
+      <!-- Linkerkant: info + kaart -->
       <div class="contact-left">
         <ul class="contact-info">
           <li><i class="fas fa-envelope"></i> <a href="mailto:info@niya-agency.nl">info@niya-agency.nl</a></li>
@@ -33,20 +48,24 @@
           <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/niyaagency.nl" target="_blank">@niyaagency.nl</a></li>
         </ul>
 
-        <!-- Kaart -->
-        <div id="map" style="height: 250px; margin-top: 20px; border-radius: 10px;"></div>
+        <!-- Leaflet Kaart -->
+        <div id="map" style="height: 300px; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></div>
       </div>
 
+      <!-- Rechterkant: formulier -->
       <div class="contact-right">
         <h2>LAAT EEN BERICHT ACHTER</h2>
         <span class="underline"></span>
         <form>
           <label for="name">Naam *</label>
           <input type="text" id="name" name="name" required>
+
           <label for="email">E-mail *</label>
           <input type="email" id="email" name="email" required>
+
           <label for="message">Laat je bericht achter *</label>
           <textarea id="message" name="message" required></textarea>
+
           <button type="submit">Verstuur bericht</button>
         </form>
       </div>
@@ -58,8 +77,14 @@
     <p>© 2024 Niya Agency. Alle rechten voorbehouden.</p>
   </footer>
 
-  <!-- Leaflet scripts -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- Leaflet JS -->
+  <script 
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1jRVzSLH5OBGfCxC6tU6ELu3tq2lCk0kYTO0pLnE="
+    crossorigin=""
+  ></script>
+
+  <!-- Jouw eigen JS -->
   <script src="script.js"></script>
 </body>
 </html>
