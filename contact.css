@@ -1,107 +1,147 @@
-/* Algemene stijlen voor de contactpagina */
 body.contact-page {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Lichte achtergrondkleur */
     color: #333;
-}
-
-/* Contactpagina hoofdindeling */
-.contact-main {
-    padding: 50px 0;
-}
-
-.contact-main .container {
+  }
+  
+  .contact-main {
+    padding: 60px 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
-}
-
-.contact-left, .contact-right {
+    gap: 40px;
+  }
+  
+  .contact-left {
     flex: 1;
     min-width: 300px;
-}
-
-.contact-left {
-    padding-right: 20px;
-}
-
-.contact-left h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.contact-left p {
-    margin: 10px 0;
-    font-size: 1rem;
-}
-
-.contact-left a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-left a:hover {
-    color: #ff6600;
-}
-
-.contact-right h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.contact-right form {
     display: flex;
     flex-direction: column;
-}
-
-.contact-right label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-right input,
-.contact-right textarea {
-    font-size: 1rem;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    gap: 20px;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info li {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .contact-info i {
+    color: #070000;
+    font-size: 1.2rem;
+  }
+  
+  .contact-info a {
+    color: #000000 !important;       /* Maak de link zwart */
+    text-decoration: none !important;/* Geen onderstreping */
+    font-weight: 700;                /* Vetgedrukt */
+    font-size: 1.1rem;               /* Iets groter voor betere balans */
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #e60023; /* Rode kleur op hover, optioneel voor interactie */
+  }
+  
+  .map-container {
     width: 100%;
-    box-sizing: border-box;
-}
-
-.contact-right button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-right button:hover {
-    background-color: #ff6600;
-}
-
-/* Kaart */
-.map-container {
-    margin-top: 30px;
-    border: 2px solid #ccc;
+    max-width: 350px;
+    height: 200px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .contact-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-right h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .underline {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #ff4d4d;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  form label {
+    font-weight: 600;
+  }
+  
+  form input,
+  form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #ff4d4d;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .map-container {
+      max-width: 100%;
+      height: 250px;
+    }
+  
+    .contact-right, .contact-left {
+      width: 100%;
+    }
+  }
 
 /* Footer */
 footer.contact-footer {
@@ -110,11 +150,82 @@ footer.contact-footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 footer.contact-footer p {
     margin: 0;
     font-size: 1rem;
+}
+
+/* Header en navbar consistent met andere pagina’s */
+.header {
+    background-color: black;
+    padding: 10px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: #f04c4c;
+}
+
+/* Icons voor navbar */
+.navbar a::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #f04c4c;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.navbar a[href*="index"]::before { content: "\f015"; }
+.navbar a[href*="clients"]::before { content: "\f0c0"; }
+.navbar a[href*="services"]::before { content: "\f7d9"; }
+.navbar a[href*="about"]::before { content: "\f007"; }
+.navbar a[href*="contact"]::before { content: "\f0e0"; }
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+
+/* Icons in header */
+.navbar a i {
+    color: #ff4d4d;
 }
 
 /* Responsiviteit */
@@ -138,3 +249,29 @@ footer.contact-footer p {
         margin: 20px 0;
     }
 }
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 20px; /* <-- toegevoegd */
+}
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 20px; /* toegevoegd */
+}
+
+.contact-left a {
+    color: #f04c4c;
+    text-decoration: underline;
+}
+
+.contact-left a:hover {
+    color: #000;
+}
+#map {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
