@@ -99,9 +99,10 @@
 
 .home-clients-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
   gap: 30px;
   justify-content: center;
+  justify-items: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -115,8 +116,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: clamp(80px, 10vw, 140px);
-  max-width: clamp(120px, 20vw, 200px);
+  width: clamp(160px, 18vw, 200px);
+  height: clamp(120px, 12vw, 140px);
   transition: transform 0.3s ease;
 }
 
@@ -173,12 +174,7 @@
     max-width: 90%;
   }
 
-  .home-clients-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-service-grid,
-  .home-clients-grid {
+  .home-service-grid {
     grid-template-columns: 1fr;
   }
 
