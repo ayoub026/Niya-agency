@@ -5,33 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onze Klanten - Niya Agency</title>
     <link rel="stylesheet" href="clients.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="clients.html" class="active">Klanten</a>
-                <a href="services.html">Diensten</a>
-                <a href="about.html">Over Ons</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <!-- Klanten Intro -->
-    <section id="clients" class="clients-section"></section>
-        <div class="container">
-            <h2 class="section-title">Onze Klanten</h2>
-            <p class="clients-intro">
-                <strong>Bij Niya Agency werken we samen met een breed scala aan bedrijven en organisaties.</strong><br>
-                Onze klanten zijn de kern van ons succes, en wij zijn trots om hun merken te ondersteunen met onze diensten en expertise.
-            </p>
-      </p>
+    <section id="clients" class="clients-section">
+      <div class="container">
+        <h2 class="section-title">Onze Klanten</h2>
+        <p class="clients-intro">
+            <strong>Bij Niya Agency werken we samen met een breed scala aan bedrijven en organisaties.</strong><br>
+            Onze klanten zijn de kern van ons succes, en wij zijn trots om hun merken te ondersteunen met onze diensten en expertise.
+        </p>
+    </section>
+   
+  
       <div class="clients-grid">
         <div class="client-item"><img src="images/4seizoensumrah_logo.png" alt="4-seizoensumrah"></div>
         <div class="client-item"><img src="images/alhussari_logo.png" alt="Al Hussari Tajweed"></div>
@@ -63,7 +58,7 @@
           <div class="client-item"><img src="images/markaz_quba.png" alt="Islamitisch Centrum Quba"></div>
           <div class="client-item"><img src="images/effectzorg.png" alt="Effectzorg"></div>
       </div>
-    </div>
+  
   </section>
 
   <section class="stats">
@@ -81,47 +76,9 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="container">
-      <h2>NEEM CONTACT OP</h2>
-      <div class="contact-grid">
-        <!-- Adres -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-          <div>
-            <h3>Adres:</h3>
-            <p>Niya Agency Hoofdkantoor<br>
-            Groningensingel 1191<br>
-            6835 HZ Arnhem<br>
-            Nederland</p>
-          </div>
-        </div>
-        <!-- Telefoon -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-phone"></i></span>
-          <div>
-            <h3>Telefoon:</h3>
-            <p><a href="tel:+31684108269">+31 6 84108269</a></p>
-          </div>
-        </div>
-        <!-- E-mail -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-envelope"></i></span>
-          <div>
-            <h3>E-mail:</h3>
-            <p><a href="mailto:Info@niya-agency.nl">Info@niya-agency.nl</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2024 Niya Agency. Alle rechten voorbehouden.</p>
-    </div>
-  </footer>
+<div id="footer"></div>
 
+
+  <script src="layout.js"></script>
 </body>
 </html>

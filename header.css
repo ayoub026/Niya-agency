@@ -1,0 +1,85 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a i {
+  color: #f04c4c;
+}
+
+.navbar a.active span {
+  border-bottom: 2px solid #f04c4c;
+}
+
+.navbar a:hover {
+  color: #f04c4c;
+}
+
+.navbar a::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  color: #f04c4c;
+  margin-right: 6px;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-toggle.active i {
+  color: #f04c4c;
+}
+
+/* Mobiel */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* standaard verbergen */
+    flex-direction: column;
+    background: #000;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar.active {
+    display: flex; /* tonen bij toggle */
+  }
+
+  .nav-toggle {
+    display: block; /* hamburger zichtbaar */
+  }
+
+  .navbar a {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+}
