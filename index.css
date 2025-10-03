@@ -60,7 +60,7 @@
 .home-service-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* CENTREERT de blokken */
+  justify-content: center;
   gap: 3rem;
   padding: 2rem 0;
 }
@@ -69,8 +69,8 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  flex: 0 1 300px; /* zorgt voor gelijke breedte-blokken */
-  max-width: 350px;
+  flex: 1 1 100%;
+  max-width: 300px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -115,9 +115,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140px;
-  width: 100%;
-  max-width: 200px;
+  height: clamp(80px, 10vw, 140px);
+  max-width: clamp(120px, 20vw, 200px);
   transition: transform 0.3s ease;
 }
 
@@ -138,18 +137,6 @@
   text-align: center;
   font-style: italic;
   padding-bottom: 2rem;
-}
-
-.home-section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.home-section-icon {
-  font-size: 2rem;
-  color: #f04c4c;
-  margin-bottom: 0.5rem;
-  display: block;
 }
 
 @media (max-width: 1024px) {
@@ -206,8 +193,8 @@
     max-width: 90%;
   }
 
-  .home-client-item {
-    margin-bottom: 1rem;
+  .home-service-icon {
+    font-size: 2rem;
   }
 }
 
@@ -221,6 +208,6 @@
   }
 
   .home-service-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
