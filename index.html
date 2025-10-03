@@ -1,135 +1,84 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Niya Agency</title>
-    
-        <!-- Font: Poppins -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-        <!-- Font Awesome Icons (essentieel voor de rode iconen in de navigatie) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-        <!-- Jouw hoofd CSS-bestanden -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <nav class="navbar">
-                    <a href="index.html">Home</a>
-                    <a href="clients.html">Klanten</a>
-                    <a href="services.html">Diensten</a>
-                    <a href="about.html">Over Ons</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            </div>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niya Agency</title>
 
-    <!-- Parallax -->
-    <section class="parallax">
-        <div class="logo-overlay">
-            <img src="images/logo.png" alt="Niya Agency Logo" class="parallax-logo" />
-        </div>
-      </section>
+    <!-- Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons (essentieel voor de rode iconen in de navigatie) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Jouw hoofd CSS-bestanden -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
 
     <!-- Hero -->
     <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="video/NIYA - website video.mp4" type="video/mp4">
-          Je browser ondersteunt deze video niet.
-        </video>
-        <div class="hero-content">
-          <h1>JOUW ONLINE MARKETING SPECIALIST</h1>
-          <p>Welkom bij Niya Agency</p>
-        </div>
-      </section>
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="video/NIYA - website video.mp4" type="video/mp4" />
+        Je browser ondersteunt deze video niet.
+      </video>
+      <div class="hero-content">
+        <h1>JOUW ONLINE MARKETING SPECIALIST</h1>
+        <p>Welkom bij Niya Agency</p>
+      </div>
+    </section>
 
     <!-- Diensten -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Onze Diensten</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <i class="fas fa-bullhorn service-icon"></i>
-                    <h3>Online Adverteren</h3>
-                    <p>Maximaliseer je bereik met gerichte advertenties op platforms zoals Google, Facebook, en Instagram.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-paint-brush service-icon"></i>
-                    <h3>Contentcreatie & Creatieve Concepten</h3>
-                    <p>Creëer pakkende visuals en overtuigende verhalen die jouw merk versterken en een blijvende indruk achterlaten.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-share-alt service-icon"></i>
-                    <h3>Social Media Beheer</h3>
-                    <p>Laat ons jouw social media kanalen beheren en een sterke online aanwezigheid opbouwen.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Klanten -->
-    <section id="clients" class="clients">
-        <div class="container">
-            <h2>Onze Klanten</h2>
-            <div class="clients-grid">
-                <div class="client-item"><img src="images/hadithshopl_logo.jpeg" alt="Hadith Shop"></div>
-                <div class="client-item"><img src="images/nzf_logo.jpeg" alt="National Zakat Foundation"></div>
-                <div class="client-item"><img src="images/logotouzanifc_white_bg.webp" alt="Touzanifc"></div>
-                <div class="client-item"><img src="images/Mastoor_logo_fixed_white_bg.webp" alt="Mastoor"></div>
-                <div class="client-item"><img src="images/celebrity_logo_white_bg.png" alt="Celebrity Hajj & Umrah"></div>
-            </div>
-            <div class="client-extra">
-                <p><em>Meer dan <strong>20 tevreden klanten</strong> gingen je voor — en dat aantal blijft groeien.</em></p>
-            </div>
-        </div>
-    </section>
-
- <!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="container">
-      <h2>NEEM CONTACT OP</h2>
-      <div class="contact-grid">
-        <!-- Adres -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-          <div>
-            <h3>Adres:</h3>
-            <p>Niya Agency Hoofdkantoor<br>
-            Groningensingel 1191<br>
-            6835 HZ Arnhem<br>
-            Nederland</p>
+    <section id="services" class="home-services">
+      <div class="container">
+        <h2>Onze Diensten</h2>
+        <div class="home-service-grid">
+          <div class="home-service-item">
+            <i class="fas fa-bullhorn service-icon"></i>
+            <h3>Online Adverteren</h3>
+            <p>Maximaliseer je bereik met gerichte advertenties op platforms zoals Google, Facebook, en Instagram.</p>
           </div>
-        </div>
-        <!-- Telefoon -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-phone"></i></span>
-          <div>
-            <h3>Telefoon:</h3>
-            <p><a href="tel:+31684108269">+31 6 84108269</a></p>
+          <div class="home-service-item">
+            <i class="fas fa-paint-brush service-icon"></i>
+            <h3>Contentcreatie & Creatieve Concepten</h3>
+            <p>Creëer pakkende visuals en overtuigende verhalen die jouw merk versterken en een blijvende indruk achterlaten.</p>
           </div>
-        </div>
-        <!-- E-mail -->
-        <div class="contact-item">
-          <span class="icon"><i class="fas fa-envelope"></i></span>
-          <div>
-            <h3>E-mail:</h3>
-            <p><a href="mailto:Info@niya-agency.nl">Info@niya-agency.nl</a></p>
+          <div class="home-service-item">
+            <i class="fas fa-share-alt service-icon"></i>
+            <h3>Social Media Beheer</h3>
+            <p>Laat ons jouw social media kanalen beheren en een sterke online aanwezigheid opbouwen.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Niya Agency. Alle rechten voorbehouden.</p>
+    <!-- Klanten -->
+    <section id="home-clients" class="home-clients">
+      <div class="container">
+        <h2>Onze Klanten</h2>
+        <div class="home-clients-grid">
+          <div class="home-client-item"><img src="images/hadithshopl_logo.jpeg" alt="Hadith Shop" /></div>
+          <div class="home-client-item"><img src="images/nzf_logo.jpeg" alt="National Zakat Foundation" /></div>
+          <div class="home-client-item"><img src="images/logotouzanifc_white_bg.webp" alt="Touzanifc" /></div>
+          <div class="home-client-item"><img src="images/Mastoor_logo_fixed_white_bg.webp" alt="Mastoor" /></div>
+          <div class="home-client-item"><img src="images/celebrity_logo_white_bg.png" alt="Celebrity Hajj & Umrah" /></div>
         </div>
-    </footer>
-</body>
+        <div class="home-client-extra">
+          <p>
+            <em>Meer dan <strong>20 tevreden klanten</strong> gingen je voor — en dat aantal blijft groeien.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="layout.js"></script>
+  </body>
 </html>
