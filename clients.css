@@ -1,29 +1,6 @@
-/* H2 Sectiekoppen */
-/* Titelstijl voor secties met witte achtergrond */
-.clients h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  position: relative;
-  display: inline-block;
-}
-
-.clients h2::after {
-  content: "";
-  display: block;
-  width: 100px; /* breder dan standaard */
-  height: 5px;
-  background-color: #f04c4c;
-  margin: 12px auto 0;
-  border-radius: 3px;
-}
-
 /* KLANTEN */
 .clients-section {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
@@ -39,10 +16,11 @@
   grid-template-columns: repeat(7, 1fr);
   gap: 30px;
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  margin: 3rem auto;
-  max-width: 1400px;
-  padding: 0 1rem;
+  max-width: 1200px;
+
+  margin: 0 auto;
 }
 
 .client-item {
@@ -82,27 +60,6 @@
   .navbar a {
     margin: 0.5rem 0;
   }
-}
-
-.clients-section h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #111;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.clients-section h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background-color: #f04c4c;
-  margin: 8px auto 0;
-  border-radius: 2px;
 }
 
 /* Beschrijving onder kop */
@@ -162,27 +119,6 @@
   .clients-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.section-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #111;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background-color: #f04c4c;
-  margin: 8px auto 0;
-  border-radius: 2px;
 }
 
 .stats {

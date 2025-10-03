@@ -59,7 +59,7 @@
   color: #ccc;
 }
 
-.contact-title {
+.footer-contact-title {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 3rem;
@@ -86,7 +86,7 @@
     text-align: center;
   }
 
-  .contact-title {
+  .footer-contact-title {
     text-align: center;
     font-size: 1.7rem;
   }
@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 576px) {
-  .contact-title {
+  .footer-contact-title {
     font-size: 1.5rem;
   }
 
@@ -126,7 +126,7 @@
 }
 
 @media (max-width: 425px) {
-  .contact-title {
+  .footer-contact-title {
     font-size: 1.4rem;
   }
 
@@ -140,7 +140,7 @@
 }
 
 @media (max-width: 320px) {
-  .contact-title {
+  .footer-contact-title {
     font-size: 1.2rem;
   }
 

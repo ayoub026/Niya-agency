@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+zNnH7tA91LZD69eIed3v7JmGk09gC+H2yM8Zn9nM=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha512-p5A+4lE8ic2E1klHXxGLnK5I5YQUAECEV4VpWwfvX2gYdExgkt1PyfuzjlGzmj5C1p3fOSv2sJrsvkK53cL2xQ==" crossorigin="" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -25,7 +25,11 @@
     <!-- Header -->
     <div id="header"></div>
     <!-- Contactgedeelte -->
+
     <section class="contact-main">
+      <section class="contact-section">
+        <h2 class="section-title">Contact</h2>
+      </section>
       <div class="container">
         <!-- Linkerkant: info + kaart -->
         <div class="contact-left">
@@ -43,7 +47,6 @@
         <!-- Rechterkant: formulier -->
         <div class="contact-right">
           <h2>LAAT EEN BERICHT ACHTER</h2>
-          <span class="underline"></span>
           <form>
             <label for="name">Naam *</label>
             <input type="text" id="name" name="name" required />
@@ -63,10 +66,10 @@
     <div id="footer"></div>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1jRVzSLH5OBGfCxC6tU6ELu3tq2lCk0kYTO0pLnE=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha512-o9N1jRVzSLH5OBGfCxC6tU6ELu3tq2lCk0kYTO0pLnE=" crossorigin=""></script>
 
-    <!-- Jouw eigen JS -->
-    <script src="script.js"></script>
+    <!-- Eerst je eigen scripts NA Leaflet -->
     <script src="layout.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

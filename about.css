@@ -1,64 +1,14 @@
 /* Over Ons hoofdtekst */
-.about-content h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
-.about-content p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto 1rem auto;
+.about-content {
+  padding: 3rem 1rem;
   text-align: center;
-  line-height: 1.8;
-}
-
-/* Sectiekop met rode streep */
-h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #111;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background-color: #f04c4c;
-  margin: 10px auto 0;
-  border-radius: 2px;
 }
 
 /* Oprichter & Cameraman sectie — ROND */
 .founder {
-  padding: 4rem 1rem;
-}
-
-.founder h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #111;
+  padding: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.founder h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background-color: #f04c4c;
-  margin: 10px auto 0;
-  border-radius: 2px;
 }
 
 /* Flexbox layout */
@@ -68,7 +18,7 @@ h2::after {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 /* Ronde profielfoto */
@@ -84,6 +34,7 @@ h2::after {
 .founder-info {
   flex: 1;
   max-width: 600px;
+  text-align: left;
 }
 
 .founder-info h3 {
